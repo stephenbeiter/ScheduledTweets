@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get "sign-in", to: "session#new"
   post "sign-in", to: "session#create"
 
+  get "password", to: "password#edit"
+  patch "password", to: "password#update"
+
   delete "logout", to: "session#destroy"
 
 end
