@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   get "password", to: "password#edit"
   patch "password", to: "password#update"
 
+  get "password/reset", to: "password_reset#new"
+  post "password/reset", to: "password_reset#create"
+
   delete "logout", to: "session#destroy"
 
 end
