@@ -24,4 +24,8 @@ Rails.application.routes.draw do
 
   delete "logout", to: "session#destroy"
 
+  get "/auth/twitter/callback", to: "omniauth_callback#twitter"
+
+  resources :twitter_accounts
+
 end
